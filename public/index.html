@@ -33,16 +33,60 @@
       <button id="guessnav">Guess the result</button>
     </nav>
     <div id="home">
-      
-    </div>    
+      <h1>Human Interface Coin Games!</h1>
+        <h2>On this website we have three games: </h2>
+          <li>Flip One Coin: Press the button to flip a coin and an image of that coin will appear.</li>
+          <li>Flip Many Coins: Enter in how many coins you want to flip and you will be shown the results of how many were heads and how many were tails.</li>
+          <li>Guess the Flip of A Coin: Guess which side the coin will land on when it flips.</li>
+    </div>  
+
     <div id="single" class="hidden">
-      
+      <button id="coin">Flip?</button>
+      <!-- A status paragraph -->
+		  <p id="active"></p>
+      <!-- A result paragraph-->
+		  <p>Result: <span id="result"></span></p>
+      <!-- An image of a US quarter (North Carolina variant) -->
+		  <img src="./assets/img/coin.png" id="quarter" class="smallcoin">
     </div>
+
     <div id="multi" class="hidden">
-      
+      <h1>Flip many coins</h1>
+			<form id="coins">
+				<label for="number">
+					<strong>How many coins?</strong>
+				</label>
+				<input type="number" name="number" id="number">
+				<input type="submit" value="Flip 'em!">
+			</form>
+
+			<h2>Results</h2>
+				<p id="heads"></p>
+          <p id="heads-img"></p>
+				<p id="tails"></p>
+          <p id="tails-img"></p>
     </div>
+
     <div id="guess" class="hidden">
-      
+      <h1>Guess and Flip!</h1>
+      <form id="guessflip">
+        <label for="guesscoin">
+          <strong>Which side do you think the coin will land on?</strong>
+        </label>
+        <input type="radio" id="guess1" name="guess" value="heads">
+        <label for="guess1">heads</label>
+        <input type="radio" id="guess2" name="guess" value="tails">
+        <label for="guess2">tails</label>
+        <input type="submit" value="Let's flip!">
+      </form>
+
+      <h2>Results</h2>
+        <p id="userguess"></p>
+        <img id="guessimg" class="smallcoin">
+        <p id="actual"></p>
+        <img id="actualimg" class="smallcoin">
+        <p id="gameresult"></p>
+        <img id="quarter" class="smallcoin">
     </div>
 	<script src="main.js"></script>
   </body>
